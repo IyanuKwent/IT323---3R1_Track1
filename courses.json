@@ -1,0 +1,38 @@
+{
+    "subjects": [
+      {
+        "year": "1st Year",
+        "semester": "1st Semester",
+        "courses": [
+          "Introduction to Programming",
+          "Calculus I",
+          "English Composition",
+          "Physics I",
+          "Basic Electronics"
+        ]
+      },
+      {
+        "year": "1st Year",
+        "semester": "2nd Semester",
+        "courses": [
+          "Data Structures",
+          "Calculus II",
+          "Technical Writing",
+          "Physics II",
+          "Computer Organization"
+        ]
+      },
+      {
+        "year": "2nd Year",
+        "semester": "1st Semester",
+        "courses": [
+          "Algorithms",
+          "Linear Algebra",
+          "Database Systems",
+          "Computer Networks",
+          "Operating Systems"
+        ]
+      }
+    ]
+  }
+  
