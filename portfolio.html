@@ -1,4 +1,151 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <style>
+    /* Overall page style */
+    #subjects-container {
+      background-color: #1e1e1e;
+      border: 1px solid red;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .subject-year {
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+      margin-top: 10px;
+    }
+    
+    .subject-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .subject-list li {
+      background: #333;
+      padding: 5px;
+      margin: 5px 0;
+      border-left: 3px solid red;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212; /* dark background */
+      color: #fff;
+    }
+    /* Header styling */
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid red; /* red accent line */
+    }
+    /* Navigation bar styling */
+    nav {
+      background-color: #000;
+      text-align: center;
+      padding: 10px;
+      border-bottom: 2px solid red; /* red accent line */
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: red;
+    }
+    /* Section styling */
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid red; /* red accent line */
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    /* Headings with red underline */
+    h1, h2, h3 {
+      border-bottom: 1px solid red;
+      padding-bottom: 5px;
+    }
+    /* Project item styling */
+    .project {
+      margin: 20px 0;
+      border: 1px solid red;
+      padding: 20px;
+      background-color: #1e1e1e;
+    }
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 3px solid red; /* red accent line */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I'm [Your Name], a passionate developer and designer. Welcome to my portfolio where I showcase my projects and skills. I specialize in web development, design, and creative problem solving.</p>
+    </div>
+  </section>
+
+  <section id="subjects">
+    <div class="container">
+      <h2>Subjects Taken</h2>
+      <div id="subjects-container"></div>
+    </div>
+  </section>
+  
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project One</h3>
+        <p>A brief description of this project goes here. Highlight key features, technologies used, and your role.</p>
+      </div>
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>A brief description of this project goes here. Highlight key features, technologies used, and your role.</p>
+      </div>
+      <!-- Add more project blocks as needed -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, feel free to email me at 
+        <a href="mailto:your.email@example.com" style="color: red;">your.email@example.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
       fetch("https://iyankwent.github.io/IT323---3R1_Track1/courses.json") // Replace with your actual GitHub Pages URL
         .then(response => response.json())
@@ -20,3 +167,5 @@
     });
   </script>
   
+</body>
+</html>
