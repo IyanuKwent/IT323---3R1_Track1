@@ -1,60 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Online CV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <style>
+    /* Overall page style */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212; /* Dark background */
+      color: #fff;
+      scroll-behavior: smooth; /* Smooth scrolling */
+    }
+
+    /* Header styling */
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid red;
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: #000;
+      text-align: center;
+      padding: 15px;
+      border-bottom: 2px solid red;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: red;
+      background: rgba(255, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    /* Button styling */
+    .nav-buttons {
+      text-align: center;
+      margin: 20px;
+    }
+    .nav-buttons button {
+      background: red;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .nav-buttons button:hover {
+      background: darkred;
+    }
+
+    /* Section styling */
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid red;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Project styling */
+    .project {
+      margin: 20px auto;
+      border: 1px solid red;
+      padding: 20px;
+      background-color: #1e1e1e;
+      width: 60%;
+      border-radius: 10px;
+    }
+
+    /* Subjects Taken */
+    #subjects-container {
+      background-color: #1e1e1e;
+      border: 1px solid red;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    .subject-year {
+      font-size: 22px;
+      font-weight: bold;
+      color: red;
+      margin-top: 15px;
+    }
+    .subject-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .subject-list li {
+      background: #333;
+      padding: 8px;
+      margin: 5px 0;
+      border-left: 3px solid red;
+      border-radius: 5px;
+    }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 3px solid red;
+    }
+  </style>
 </head>
 <body>
 
-    <div>
-        <p>I am header with an unordered list of hyperlinks</p>
-        <ul>
-            <li><a href="#about">I am About link and my href value is #about</a></li>
-            <li><a href="#education">I am Education link and my href value is #education</a></li>
-            <li><a href="#skills">I am Skills link and my href value is #skills</a></li>
-            <li><a href="#portfolio">I am Portfolio link and my href value is #portfolio</a></li>
-            <li><a href="#contact">I am Contact link and my href value is #contact</a></li>
-        </ul>
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#subjects">Subjects Taken</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <button onclick="window.location.href='act2.html'">HTML with CSS</button>
+    <button onclick="window.location.href='act1.html'">Basic HTML</button>
+    <button onclick="window.location.href='html.html'">Basic HTML</button>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I'm Dario, a passionate developer and designer. I specialize in web development, UI/UX design, and creative problem-solving.</p>
     </div>
+  </section>
 
-    <div>
-        <img src="images/tumpet.png" alt="Tumpet2 Image">
-
-        <p>I alone is a tumpet one</p>
+  <section id="subjects">
+    <div class="container">
+      <h2>Subjects Taken</h2>
+      <div id="subjects-container"></div>
     </div>
+  </section>
 
-    <div class="page-content">
-        <p>I am division with class equal to page-content that encloses all other division elements below</p>
-        
-        <h1>Hello! I am a text with the largest heading</h1>
-
-        <div id="about">
-            <p>I am division with id equal to about</p>
-        </div>
-        <div id="education">
-            <p>I am division with id equal to education</p>
-        </div>
-        <div id="skills">
-            <p>I am division with id equal to skills</p>
-        </div>
-        <div id="portfolio">
-            <p>I am division with id equal to portfolio</p>
-        </div>
-        <div id="contact">
-            <p>I am division with id equal to contact</p>
-        </div>
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project One</h3>
+        <p>A brief description of this project goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>A brief description of this project goes here.</p>
+      </div>
     </div>
+  </section>
 
-    <footer>
-        <p>I am a footer the last section of this page</p>
-    </footer>
-
-    <div>
-        <button onclick="window.location.href='index.html'">Simple HTML</button>
-        <button onclick="window.location.href='styled.html'">HTML with CSS</button>
-        <button onclick="window.location.href='portfolio.html'">Portfolio</button>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:dario@example.com" style="color: red;">dario@example.com</a></p>
     </div>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 Dario. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("https://iyankwent.github.io/IT323---3R1_Track1/courses.json") // Ensure this URL is correct
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById("subjects-container");
+          
+          data.subjects.forEach(subjectGroup => {
+            let section = document.createElement("div");
+            section.innerHTML = `
+              <h3 class="subject-year">${subjectGroup.year} - ${subjectGroup.semester}</h3>
+              <ul class="subject-list">
+                ${subjectGroup.courses.map(course => `<li>${course}</li>`).join("")}
+              </ul>
+            `;
+            container.appendChild(section);
+          });
+        })
+        .catch(error => console.error("Error loading courses:", error));
+    });
+  </script>
+  
 </body>
 </html>
