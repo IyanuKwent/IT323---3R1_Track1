@@ -70,22 +70,3 @@ footer {
     color: white;
 }
 
-
-.buttons {
-    margin-top: 20px;
-}
-
-.buttons button {
-    margin: 5px;
-    padding: 10px 15px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.buttons button:hover {
-    background: #0056b3;
-}
