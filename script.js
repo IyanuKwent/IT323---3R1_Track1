@@ -1,13 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const courseList = document.getElementById("course-list");
 
-    fetch("course.json") // Load JSON File
-        .then(response => response.json())
+    fetch("course.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not OK");
+            }
+            return response.json();
+        })
         .then(data => {
-            courseList.innerHTML = ""; // Clear Loading Text
+            courseList.innerHTML = ""; // Clear "Loading courses..." text
+
+            if (!data.courses || data.courses.length === 0) {
+                courseList.innerHTML = "<p>No courses found.</p>";
+                return;
+            }
 
             data.courses.forEach(course => {
-                // Create Course Ice Cube
                 const courseDiv = document.createElement("div");
                 courseDiv.classList.add("course");
 
@@ -32,23 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const profilePic = document.getElementById("profile-pic");
 
     document.getElementById("about").addEventListener("mouseover", function () {
-        profilePic.src = "images/pfp.png"; // Change this to your About Me image
+        profilePic.src = "images/pfp.png";
     });
 
     document.getElementById("education").addEventListener("mouseover", function () {
-        profilePic.src = "images/pfp2.png"; // Change this to your Education image
+        profilePic.src = "images/pfp2.png";
     });
 
     document.getElementById("skills").addEventListener("mouseover", function () {
-        profilePic.src = "images/pfp3.png"; // Change this to your Skills image
+        profilePic.src = "images/pfp3.png";
     });
 
-    // Optional: Reset the image when not hovering
+
     document.querySelector(".right").addEventListener("mouseleave", function () {
-        profilePic.src = "images/pfp.png"; // Default image
+        profilePic.src = "images/pfp.png";
     });
 });
