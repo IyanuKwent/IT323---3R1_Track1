@@ -168,59 +168,72 @@ footer {
   
 
 /* Courses Section */
+/* Courses Section */
 #courses {
-    text-align: center;
-    padding: 50px;
-    margin-top: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#courses h2 {
-    font-size: 2rem;
-    color: #00eaff;
-    text-shadow: 2px 2px 5px rgba(0, 230, 255, 0.8);
-}
-
-/* Ice Cube Course Cards */
-.course-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.course {
+    text-align: justify;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 20px;
-    width: 250px;
     border-radius: 15px;
     border: 2px solid rgba(0, 230, 255, 0.4);
-    text-align: center;
-    transition: 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 230, 255, 0.3);
 }
 
-.course:hover {
-    transform: scale(1.05);
+/* Scrollable Container */
+#course-list {
+    max-height: 300px; /* Set max height for scroll */
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 230, 255, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: #00eaff rgba(0, 230, 255, 0.2);
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+#course-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#course-list::-webkit-scrollbar-track {
     background: rgba(0, 230, 255, 0.2);
-    box-shadow: 0 6px 15px rgba(0, 230, 255, 0.6);
+    border-radius: 10px;
+}
+
+#course-list::-webkit-scrollbar-thumb {
+    background: #00eaff;
+    border-radius: 10px;
+}
+
+/* Course Items */
+.course {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 230, 255, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 230, 255, 0.3);
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.course:hover {
+    background: rgba(0, 230, 255, 0.2);
+    transform: scale(1.02);
 }
 
 /* Course Title */
 .course h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
     color: #e0f7fa;
     text-shadow: 1px 1px 3px rgba(0, 230, 255, 0.7);
 }
 
 /* Semester Title */
 .course h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #b2ebf2;
 }
 
@@ -228,17 +241,18 @@ footer {
 .course ul {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .course ul li {
     font-size: 0.9rem;
     color: white;
-    padding: 5px 0;
-    transition: 0.3s ease-in-out;
+    padding: 4px 0;
+    transition: 0.3s;
 }
 
 .course ul li:hover {
     color: #00eaff;
     transform: scale(1.05);
 }
+
