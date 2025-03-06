@@ -167,8 +167,7 @@ footer {
   }
   
 
-/* Courses Section */
-/* Courses Section */
+
 #courses {
     text-align: justify;
     padding: 20px;
@@ -181,9 +180,9 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 230, 255, 0.3);
 }
 
-/* Scrollable Container */
+
 #course-list {
-    max-height: 300px; /* Set max height for scroll */
+    max-height: 300px;
     overflow-y: auto;
     padding: 10px;
     border-radius: 10px;
@@ -192,7 +191,7 @@ footer {
     scrollbar-color: #00eaff rgba(0, 230, 255, 0.2);
 }
 
-/* Custom Scrollbar for WebKit Browsers */
+
 #course-list::-webkit-scrollbar {
     width: 8px;
 }
@@ -207,7 +206,7 @@ footer {
     border-radius: 10px;
 }
 
-/* Course Items */
+
 .course {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -224,20 +223,20 @@ footer {
     transform: scale(1.02);
 }
 
-/* Course Title */
+
 .course h3 {
     font-size: 1.3rem;
     color: #e0f7fa;
     text-shadow: 1px 1px 3px rgba(0, 230, 255, 0.7);
 }
 
-/* Semester Title */
+
 .course h4 {
     font-size: 1.1rem;
     color: #b2ebf2;
 }
 
-/* Subject List */
+
 .course ul {
     list-style: none;
     padding: 0;
