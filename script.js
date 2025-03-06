@@ -1,32 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const courseList = document.getElementById("course-list");
-
-    fetch("course.json")
-        .then(response => response.json())
+    fetch("courses.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load JSON file");
+            }
+            return response.json();
+        })
         .then(data => {
-            courseList.innerHTML = "";
-
-            data.courses.forEach(course => {
-                const courseDiv = document.createElement("div");
-                courseDiv.classList.add("course");
-
-                courseDiv.innerHTML = `
-                    <h3>${course.year}</h3>
-                    <h4>${course.semester}</h4>
-                    <ul>
-                        ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
-                    </ul>
-                `;
-
-                courseList.appendChild(courseDiv);
-            });
+            displayCourses(data.courses);
         })
         .catch(error => {
-            console.error("Error loading courses:", error);
-            courseList.innerHTML = "<p>Failed to load courses.</p>";
+            console.error("Error fetching JSON:", error);
+            document.getElementById("course-list").innerHTML = "<li>Failed to load courses.</li>";
         });
 });
-
 
 function displayCourses(courses) {
     const courseList = document.getElementById("course-list");
