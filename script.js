@@ -11,29 +11,29 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
             console.error("Error fetching JSON:", error);
-            document.getElementById("course-list").innerHTML = "<li>Failed to load courses.</li>";
+            document.getElementById("courses").innerHTML = "<p>Failed to load courses.</p>";
         });
 });
 
 function displayCourses(courses) {
-    const courseList = document.getElementById("course-list");
-    courseList.innerHTML = ""; // Clear the default "Loading courses..." message
+    const coursesContainer = document.getElementById("courses");
+    coursesContainer.innerHTML = "<h2>My Finished Courses</h2>";
 
     courses.forEach(course => {
-        const courseHeader = document.createElement("h3");
-        courseHeader.textContent = `${course.year} - ${course.semester}`;
-        courseList.appendChild(courseHeader);
+        const courseDiv = document.createElement("div");
+        courseDiv.classList.add("course");
 
-        const subjectList = document.createElement("ul");
-        course.subjects.forEach(subject => {
-            const subjectItem = document.createElement("li");
-            subjectItem.textContent = subject;
-            subjectList.appendChild(subjectItem);
-        });
+        courseDiv.innerHTML = `
+            <h3>${course.year} - ${course.semester}</h3>
+            <ul>
+                ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
+            </ul>
+        `;
 
-        courseList.appendChild(subjectList);
+        coursesContainer.appendChild(courseDiv);
     });
 }
+
 
 
 
