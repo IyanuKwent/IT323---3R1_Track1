@@ -1,84 +1,168 @@
-* {
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #eef2f3;
-    color: #333;
+    background: linear-gradient(to right, #0a192f, #102a43);
+    color: #e0f7fa;
     text-align: center;
-    padding: 20px;
+    scroll-behavior: smooth;
 }
 
+/* Header */
 header {
-    background-color: #222;
+    background: rgba(0, 172, 193, 0.9);
     color: white;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 230, 255, 0.6);
 }
 
 header ul {
-    list-style: none;
-    padding: 10px;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+header ul li {
+    list-style: none;
+}
+
 header ul li a {
+    color: #e0f7fa;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
 }
 
 header ul li a:hover {
-    color: #f4a261;
+    background: rgba(0, 230, 255, 0.5);
+    border-radius: 5px;
 }
 
-.image-section {
-    margin: 30px auto;
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
 }
 
-.image-section img {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.page-content {
-    margin: 30px auto;
-    width: 80%;
-    padding: 20px;
-    background: white;
+/* Left Side (Profile) */
+.left {
+    text-align: center;
+    background: rgba(0, 150, 200, 0.2);
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease-in-out;
 }
 
-h1 {
-    color: #222;
-    font-size: 2rem;
-    margin-bottom: 20px;
+.left img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #00eaff;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-div {
-    margin: 15px 0;
-    padding: 15px;
+.left img:hover {
+    transform: scale(1.05);
+}
+
+/* Right Side (Content) */
+.right {
+    max-width: 600px;
+    padding: 30px;
+    text-align: left;
+}
+
+/* Animated Sections */
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
     border-radius: 8px;
-    border: 1px solid #ddd;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out;
 }
 
-footer {
-    margin-top: 20px;
-    padding: 15px;
-    background: #222;
-    color: white;
-    font-size: 14px;
-    border-top: 3px solid #f4a261;
+.section:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
 }
+
+/* Profile Picture Change on Hover */
+#about:hover ~ .left img {
+    content: url('images/pfp.png'); /* Change this to your About Me image */
+}
+
+#education:hover ~ .left img {
+    content: url('images/pfp2.png'); /* Change this to your Education image */
+}
+
+#skills:hover ~ .left img {
+    content: url('images/pfp3.png'); /* Change this to your Skills image */
+}
+
+.section h2 {
+    color: #00eaff;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 12px 20px;
+    background: rgba(0, 200, 255, 0.3);
+    border: 1px solid rgba(0, 230, 255, 0.8);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    background: rgba(0, 230, 255, 0.9);
+    box-shadow: 0 0 15px rgba(0, 230, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #011a2b;
+    color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+.sidebar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar button {
+    padding: 12px 20px;
+    background: rgba(0, 200, 255, 0.3);
+    border: 1px solid rgba(0, 230, 255, 0.8);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .sidebar button:hover {
+    background: rgba(0, 230, 255, 0.9);
+    box-shadow: 0 0 15px rgba(0, 230, 255, 0.8);
+    transform: scale(1.05);
+  }
+  

@@ -34,3 +34,26 @@ function displayCourses(courses) {
         courseList.appendChild(subjectList);
     });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const profilePic = document.getElementById("profile-pic");
+
+    document.getElementById("about").addEventListener("mouseover", function () {
+        profilePic.src = "images/pfp.png"; // Change this to your About Me image
+    });
+
+    document.getElementById("education").addEventListener("mouseover", function () {
+        profilePic.src = "images/pfp2.png"; // Change this to your Education image
+    });
+
+    document.getElementById("skills").addEventListener("mouseover", function () {
+        profilePic.src = "images/pfp3.png"; // Change this to your Skills image
+    });
+
+    // Optional: Reset the image when not hovering
+    document.querySelector(".right").addEventListener("mouseleave", function () {
+        profilePic.src = "images/pfp.png"; // Default image
+    });
+});

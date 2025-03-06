@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-  <header>
-    <h1>About Me</h1>
-  </header>
-  <section>
-    <p>This is my portfolio page where I showcase my work and projects.</p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Olandria. All rights reserved.</p>
-  </footer>
-  <button onclick="window.location.href='act3.html'">Profile</button>
-  <button onclick="window.location.href='act2.html'">HTML with CSS</button>
-  <button onclick="window.location.href='act1.html'">Basic HTML</button>
-  <button onclick="window.location.href='index.html'">Home</button>
+
+    <!-- Header -->
+    <header>
+        <h1>Activities</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar (Centered Navigation) -->
+        <nav class="sidebar">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='act3.html'">Profile</button>
+            <button onclick="window.location.href='act2.html'">HTML with CSS</button>
+            <button onclick="window.location.href='act1.html'">Basic HTML</button>
+        </nav>
+
+        <!-- Profile Image Section -->
+        <div class="profile-container">
+            <img src="images/pfp.png" alt="mY fAcE?">
+            <p>Ian Kent T. Olandria</p>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h2>Time to Lock In!</h2>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Olandria. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

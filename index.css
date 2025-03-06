@@ -1,88 +1,81 @@
-* {
+body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0a192f, #102a43);
+  color: #e0f7fa;
+  text-align: center;
 }
-
-nav {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-}
-
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-  border-radius: 5px;
-}
-
 
 header {
-  text-align: center;
-  color: black;
-  padding: 100px 20px;
-}
-
-header h1 {
-  font-size: 3em;
-}
-
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
-.activities {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.activity-links {
-  margin-top: 20px;
-}
-
-.btn {
-  text-decoration: none;
-  background-color: #333;
+  background: rgba(0, 172, 193, 0.9);
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 10px;
-  display: inline-block;
+  padding: 20px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 230, 255, 0.6);
 }
 
-.btn:hover {
-  background-color: #555;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.sidebar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.sidebar button {
+  padding: 12px 20px;
+  background: rgba(0, 200, 255, 0.3);
+  border: 1px solid rgba(0, 230, 255, 0.8);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.sidebar button:hover {
+  background: rgba(0, 230, 255, 0.9);
+  box-shadow: 0 0 15px rgba(0, 230, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* Profile Image Section */
+.profile-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 150, 200, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  width: 300px;
+  text-align: center;
+}
+
+.profile-container img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid #00eaff;
+  margin-bottom: 10px;
+}
+
+.hero {
+  padding: 40px;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 5px rgba(0, 230, 255, 0.5);
 }
 
 footer {
-  text-align: center;
-  background: #333;
+  background: #011a2b;
   color: white;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 15px;
+  font-size: 0.9rem;
 }
