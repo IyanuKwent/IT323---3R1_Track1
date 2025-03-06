@@ -1,204 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
-  <style>
-    /* Overall page style */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #121212; /* Dark background */
-      color: #fff;
-      scroll-behavior: smooth; /* Smooth scrolling */
-    }
-
-    /* Header styling */
-    header {
-      background-color: #000;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 3px solid red;
-    }
-
-    /* Navigation bar styling */
-    nav {
-      background-color: #000;
-      text-align: center;
-      padding: 15px;
-      border-bottom: 2px solid red;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 15px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: red;
-      background: rgba(255, 0, 0, 0.2);
-      border-radius: 5px;
-    }
-
-    /* Button styling */
-    .nav-buttons {
-      text-align: center;
-      margin: 20px;
-    }
-    .nav-buttons button {
-      background: red;
-      color: white;
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-    .nav-buttons button:hover {
-      background: darkred;
-    }
-
-    /* Section styling */
-    section {
-      padding: 50px 20px;
-      border-bottom: 1px solid red;
-      text-align: center;
-    }
-    .container {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    /* Project styling */
-    .project {
-      margin: 20px auto;
-      border: 1px solid red;
-      padding: 20px;
-      background-color: #1e1e1e;
-      width: 60%;
-      border-radius: 10px;
-    }
-
-    /* Subjects Taken */
-    #subjects-container {
-      background-color: #1e1e1e;
-      border: 1px solid red;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-    .subject-year {
-      font-size: 22px;
-      font-weight: bold;
-      color: red;
-      margin-top: 15px;
-    }
-    .subject-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    .subject-list li {
-      background: #333;
-      padding: 8px;
-      margin: 5px 0;
-      border-left: 3px solid red;
-      border-radius: 5px;
-    }
-
-    /* Footer styling */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-      border-top: 3px solid red;
-    }
-  </style>
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>My Portfolio</h1>
-  </header>
+    <nav>
+        <div class="logo">AppDev</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#subjects">Subjects Taken</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <header>
+        <h1>Welcome</h1>
+        <p>This is where I store my activities</p>
+    </header>
 
-  <!-- Navigation Buttons -->
-  <div class="nav-buttons">
-    <button onclick="window.location.href='act2.html'">HTML with CSS</button>
-    <button onclick="window.location.href='act1.html'">Basic HTML</button>
-    <button onclick="window.location.href='html.html'">Basic HTML</button>
-  </div>
+    <section id="activities" class="activities">
+        <h2>Activities!!</h2>
+        <div class="activity-links">
+            <a href="Act1.html" class="btn">Go to Activity 1</a>
+            <a href="Act2.html" class="btn">Go to Activity 2</a>
+            <a href="Act3.html" class="btn">Go to Activity 3</a>
+        </div>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Hello! I'm Dario, a passionate developer and designer. I specialize in web development, UI/UX design, and creative problem-solving.</p>
-    </div>
-  </section>
+    <footer id="contact">
+<p>Contacts: olandria.iankent@gmail.com</p>
 
-  <section id="subjects">
-    <div class="container">
-      <h2>Subjects Taken</h2>
-      <div id="subjects-container"></div>
-    </div>
-  </section>
+    </footer>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project One</h3>
-        <p>A brief description of this project goes here.</p>
-      </div>
-      <div class="project">
-        <h3>Project Two</h3>
-        <p>A brief description of this project goes here.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:dario@example.com" style="color: red;">dario@example.com</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Dario. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("https://iyankwent.github.io/IT323---3R1_Track1/courses.json") // Ensure this URL is correct
-        .then(response => response.json())
-        .then(data => {
-          const container = document.getElementById("subjects-container");
-          
-          data.subjects.forEach(subjectGroup => {
-            let section = document.createElement("div");
-            section.innerHTML = `
-              <h3 class="subject-year">${subjectGroup.year} - ${subjectGroup.semester}</h3>
-              <ul class="subject-list">
-                ${subjectGroup.courses.map(course => `<li>${course}</li>`).join("")}
-              </ul>
-            `;
-            container.appendChild(section);
-          });
-        })
-        .catch(error => console.error("Error loading courses:", error));
-    });
-  </script>
-  
 </body>
+
 </html>
