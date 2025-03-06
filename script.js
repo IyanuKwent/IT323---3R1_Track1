@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const courseList = document.getElementById("course-list");
 
-    fetch("course.json") // Load JSON File
+    fetch("course.json")
         .then(response => response.json())
         .then(data => {
-            courseList.innerHTML = ""; // Clear Loading Text
+            courseList.innerHTML = "";
 
             data.courses.forEach(course => {
-                // Create Course Ice Cube
                 const courseDiv = document.createElement("div");
                 courseDiv.classList.add("course");
 
