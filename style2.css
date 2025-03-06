@@ -8,7 +8,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Header */
+
 header {
     background: rgba(0, 172, 193, 0.9);
     color: white;
@@ -41,7 +41,7 @@ header ul li a:hover {
     border-radius: 5px;
 }
 
-/* Container Layout */
+
 .container {
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@ header ul li a:hover {
     gap: 30px;
 }
 
-/* Left Side (Profile) */
+
 .left {
     text-align: center;
     background: rgba(0, 150, 200, 0.2);
@@ -72,14 +72,14 @@ header ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Right Side (Content) */
+
 .right {
     max-width: 600px;
     padding: 30px;
     text-align: left;
 }
 
-/* Animated Sections */
+
 .section {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -93,24 +93,24 @@ header ul li a:hover {
     transform: scale(1.02);
 }
 
-/* Profile Picture Change on Hover */
+
 #about:hover ~ .left img {
-    content: url('images/pfp.png'); /* Change this to your About Me image */
+    content: url('images/pfp.png');
 }
 
 #education:hover ~ .left img {
-    content: url('images/pfp2.png'); /* Change this to your Education image */
+    content: url('images/pfp2.png');
 }
 
 #skills:hover ~ .left img {
-    content: url('images/pfp3.png'); /* Change this to your Skills image */
+    content: url('images/pfp3.png');
 }
 
 .section h2 {
     color: #00eaff;
 }
 
-/* Buttons */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -135,7 +135,7 @@ header ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
+
 footer {
     background: #011a2b;
     color: white;
@@ -166,7 +166,7 @@ footer {
     transform: scale(1.05);
   }
   
-  /* Courses Section */
+
 #courses {
     text-align: center;
     padding: 50px;
@@ -178,7 +178,7 @@ footer {
     text-shadow: 2px 2px 5px rgba(0, 230, 255, 0.8);
 }
 
-/* Ice Cube Course Cards */
+
 .course-container {
     display: flex;
     flex-wrap: wrap;
@@ -205,7 +205,7 @@ footer {
     box-shadow: 0 6px 15px rgba(0, 230, 255, 0.6);
 }
 
-/* Course Title */
+
 .course h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -213,13 +213,13 @@ footer {
     text-shadow: 1px 1px 3px rgba(0, 230, 255, 0.7);
 }
 
-/* Semester Title */
+
 .course h4 {
     font-size: 1.2rem;
     color: #b2ebf2;
 }
 
-/* Subject List */
+
 .course ul {
     list-style: none;
     padding: 0;
