@@ -1,19 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("courses.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to load JSON file");
-            }
-            return response.json();
-        })
+    const courseList = document.getElementById("course-list");
+
+    fetch("course.json") // Load JSON File
+        .then(response => response.json())
         .then(data => {
-            displayCourses(data.courses);
+            courseList.innerHTML = ""; // Clear Loading Text
+
+            data.courses.forEach(course => {
+                // Create Course Ice Cube
+                const courseDiv = document.createElement("div");
+                courseDiv.classList.add("course");
+
+                courseDiv.innerHTML = `
+                    <h3>${course.year}</h3>
+                    <h4>${course.semester}</h4>
+                    <ul>
+                        ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
+                    </ul>
+                `;
+
+                courseList.appendChild(courseDiv);
+            });
         })
         .catch(error => {
-            console.error("Error fetching JSON:", error);
-            document.getElementById("course-list").innerHTML = "<li>Failed to load courses.</li>";
+            console.error("Error loading courses:", error);
+            courseList.innerHTML = "<p>Failed to load courses.</p>";
         });
 });
+
 
 function displayCourses(courses) {
     const courseList = document.getElementById("course-list");
