@@ -255,3 +255,23 @@ footer {
     transform: scale(1.05);
 }
 
+/* Search Bar */
+#search-bar {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(0, 230, 255, 0.6);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0f7fa;
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #00eaff;
+    box-shadow: 0 0 10px rgba(0, 230, 255, 0.6);
+}
