@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const courseList = document.getElementById("course-list");
     const searchBar = document.getElementById("search-bar");
 
-    if (!courseList || !searchBar) {
-        console.error("Error: Course list or search bar not found.");
+    if (!courseList) {
+        console.error("Error: Course list not found.");
         return;
     }
 
@@ -18,17 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
             let allCourses = data.courses;
 
             function displayCourses(filter = "") {
-                courseList.innerHTML = ""; // Clear previous courses
+                courseList.innerHTML = "";
 
-                let foundCourses = false; // Track if any courses match
+                let foundCourses = false;
 
                 allCourses.forEach(course => {
                     let matchingSubjects = course.subjects.filter(subject =>
                         subject.toLowerCase().includes(filter.toLowerCase())
                     );
 
-                    if (matchingSubjects.length > 0 || filter === "") {
-                        foundCourses = true; // At least one course is found
+                    if ((document.location.pathname.includes("PIT1.html") && matchingSubjects.length > 0) || 
+                        document.location.pathname.includes("act3.html") || filter === "") {
+                        
+                        foundCourses = true;
 
                         const courseDiv = document.createElement("div");
                         courseDiv.classList.add("course");
@@ -49,20 +51,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // Display all courses initially
-            displayCourses();
 
-            // Ensure search bar triggers display update
-            searchBar.addEventListener("input", function () {
-                displayCourses(this.value.trim());
-            });
+            if (document.location.pathname.includes("PIT1.html") && searchBar) {
+                searchBar.addEventListener("input", function () {
+                    displayCourses(this.value.trim());
+                });
+            } else {
+                displayCourses();
+            }
         })
         .catch(error => {
             console.error("Error fetching JSON:", error);
             courseList.innerHTML = "<p style='color:white;'>Failed to load courses.</p>";
         });
 
-    // Profile Picture Hover Effect
+
     const profilePic = document.getElementById("profile-pic");
 
     document.getElementById("about").addEventListener("mouseover", function () {
