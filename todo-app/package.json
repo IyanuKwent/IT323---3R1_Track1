@@ -1,6 +1,7 @@
 {
   "name": "todo-app",
-  "homepage": "https://IyanuKwent.github.io/IT323---3R1_Track1",
+  "homepage": "https://IyanuKwent.github.io/IT323---3R1_Track1/todo-app"
+,
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
