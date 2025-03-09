@@ -1,17 +1,9 @@
 import { useState } from "react";
 
-export default function TodoList() {
-  const [tasks, setTasks] = useState([]);
-  const [task, setTask] = useState("");
+export default function TodoList({ tasks, setTasks }) {
   const [editIndex, setEditIndex] = useState(null);
   const [editText, setEditText] = useState("");
   const [filter, setFilter] = useState("all");
-
-  const addTask = () => {
-    if (task.trim() === "") return;
-    setTasks([...tasks, { text: task, completed: false }]);
-    setTask("");
-  };
 
   const removeTask = (index) => {
     setTasks(tasks.filter((_, i) => i !== index));
@@ -44,16 +36,7 @@ export default function TodoList() {
   });
 
   return (
-    <div className="todo-container">
-      <h2>To-Do List</h2>
-      <input
-        type="text"
-        placeholder="Add a new task..."
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-      />
-      <button onClick={addTask}>Add Task</button>
-
+    <div className="task-container">
       <div className="filters">
         <button onClick={() => setFilter("all")}>All</button>
         <button onClick={() => setFilter("completed")}>Completed</button>
