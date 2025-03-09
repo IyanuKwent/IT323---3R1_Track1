@@ -1,9 +1,22 @@
-import TodoList from "./TodoList";
+import { useEffect, useState } from "react";
+import TodoList from "./components/TodoList";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "";
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
   return (
     <div className="app-container">
       <h1>React TODO App</h1>
+      <button onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+      </button>
       <TodoList />
     </div>
   );

@@ -26,5 +26,25 @@ input {
 
 button {
   padding: 8px;
+  margin: 5px;
   cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.filters button {
+  margin: 5px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .app-container {
+  background: #222;
+  color: white;
 }
